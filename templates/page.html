@@ -5,8 +5,8 @@
 	<meta property="og:site_name" content="{{ SITENAME }}"/>
 	<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
 	<meta property="og:description" content="{{page.summary|striptags}}" />
-	{% if page.og_image %}
-	<meta property="og:image" content="{{page.og_image}}" />
+	{% if page.cover_image %}
+	<meta property="og:image" content="{{page.cover_image}}" />
 	{% else %}
 	<meta property="og:image" content="{{ SITEURL }}{{PROFILE_IMAGE_URL}}" />
 	{% endif %}
