@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% block title %}{{ page.title|striptags }} // {{ super() }}{% endblock title %}
+{% block facebook %}
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:site_name" content="{{ SITENAME }}"/>
+	<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+	<meta property="og:description" content="{{page.summary|striptags}}" />
+	{% if page.cover_image %}
+	<meta property="og:image" content="{{page.cover_image}}" />
+	{% else %}
+	<meta property="og:image" content="{{ SITEURL }}{{PROFILE_IMAGE_URL}}" />
+	{% endif %}
+	<meta property="og:type" content="article" />
+	<meta property="fb:app_id" content="{{FACEBOOK_APP_ID}}" />
+{% endblock facebook %}
+
+{% block twitter %}
+	{% if page.cover_image %}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image:src" content="{{article.cover_image}}">
+	{% else %}
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image:src" content="{{ SITEURL }}{{PROFILE_IMAGE_URL}}">
+	{% endif %}
+	{% if TWITTER_SITE_ID %}
+	<meta name="twitter:site" content="{{TWITTER_SITE_ID}}">
+	<meta name="twitter:creator" content="{{TWITTER_SITE_ID}}">
+	{% endif %}
+	<meta name="twitter:title" content="{{ page.title }}">
+	<meta name="twitter:description" content="{{page.summary|striptags}}">
+{% endblock twitter %}
+
+{% block content %}
+<div class="pure-g-r" id="layout">
+    {% include 'sidebar.html' %}
+    <div class="pure-u-1">
+        <div class="content">
+            <h1 class="content-subhead">{{ page.title }}</h1>
+            <p>{{ page.content }}</p>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}
