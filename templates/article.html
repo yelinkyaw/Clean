@@ -5,8 +5,8 @@
 	<meta property="og:site_name" content="{{ SITENAME }}"/>
 	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
 	<meta property="og:description" content="{{article.summary|striptags}}" />
-	{% if article.cover_image %}
-	<meta property="og:image" content="{{article.cover_image}}" />
+	{% if article.og_image %}
+	<meta property="og:image" content="{{article.og_image}}" />
 	{% else %}
 	<meta property="og:image" content="{{ SITEURL }}{{PROFILE_IMAGE_URL}}" />
 	{% endif %}
@@ -63,20 +63,20 @@
         <div class="content">
             <section class="post">
                 <header class="post-header">
-                    <h1>{{ article.title }}</h1>
+                    <h1><span class="post-myanmar">{{ article.title }}</span></h1>
 							<p class="post-meta">
                             // Under <a href="{{ SITEURL }}/{{ article.category.url }}"><span class="post-myanmar">{{ article.category }}</span></a>
 							</p>
 							{% if article.tags %}
                         <p class="post-meta">
                             // Tags {% for tag in article.tags %}
-                                <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                                <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}"><span class="post-myanmar">{{ tag }}</span></a>
                             {% endfor %}
                         </p>
 							{% endif %}
                 </header>
             </section>
-            {{ article.content }}
+            <span class="post-myanmar">{{ article.content }}</span>
             <div class="fb-like" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
             <div class="hr"></div>
             <a href="#" class="go-top">Go Top</a>

@@ -11,7 +11,7 @@
             <h1 class="content-subhead">All posts</h1>
 				<ul>
 					{% for category, articles in categories %}
-					<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
+					<li><a href="{{ SITEURL }}/{{ category.url }}"><span class="post-myanmar">{{ category }}</span></a> ({{ articles|count }})</li>
 					{% endfor %}
 				</ul>
         </div>

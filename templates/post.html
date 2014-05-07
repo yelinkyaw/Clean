@@ -1,9 +1,9 @@
 <section class="post">
     <header class="post-header">
-        <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-            <p class="post-meta">{{ article.summary }}</p>
+        <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}"><span class="post-myanmar">{{ article.title }}</span></a></h3>
+            <div class="post-myanmar"><span class="post-myanmar">{{ article.summary }}</span></div>
             <p class="post-meta">
-                in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> &middot; {{ article.locale_date }}
+                in <a href="{{ SITEURL }}/{{ article.category.url }}"><span class="post-myanmar">{{ article.category }}</span></a> &middot; {{ article.locale_date }}
             </p>
     </header>
 </section>

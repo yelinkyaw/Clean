@@ -13,8 +13,8 @@
                 <div class="archive-item">
                     <h5 class="archive-date">{{ article.date|strftime('%Y') }}</h5>
                     <h4 class="archive-date">{{ article.date|strftime('%d %B') }}</h4>
-                    <div class="archive-post"><a href="{{ article.url }}">{{ article.title }}</a></div>
-                    <p class="archive-meta">{{ article.author }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+                    <div class="archive-post"><a href="{{ article.url }}"><span class="post-myanmar">{{ article.title }}</span></a></div>
+                    <p class="archive-meta">{{ article.author }} in <a href="{{ SITEURL }}/{{ article.category.url }}"><span class="post-myanmar">{{ article.category }}</span></a></p>
                 </div>
             {% endfor %}
         </div>

@@ -194,7 +194,7 @@ pre {
     padding: 2em 3em 0;
     max-width: 1000px;
     font-size: 110%;
-    line-height: 1.45;
+    line-height: 1.8;
     color: #333332;
 }
 
@@ -202,11 +202,17 @@ pre {
     padding-bottom: 1em;
     border-bottom: 1px solid #f2f2f0;
 }
+
+.post-myanmar {
+    font-family: "MON3 Anonta 1", "Masterpiece Uni Sans", TharLon, Yunghkio, Myanmar3, Panglong, Parabaik, "WinUni Innwa", "Win Uni Innwa", Padauk, "Myanmar Sangam MN", "Myanmar MN", "Myanmar Text", sans-serif;
+}
+
 .post-title {
     font-size: 1.5em;
     color: #333332;
     letter-spacing: -1px;
 }
+
 .post-meta {
     color: #999;
     font-size: 90%;
