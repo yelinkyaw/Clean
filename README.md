@@ -1,5 +1,7 @@
-Clean is a minimal and single user blogging theme that based on [Pure](http://purepelican.com) for [Pelican](http://docs.getpelican.com/) blogs.
-=======
+Clean
+====
+Clean is a minimal and single user blogging theme for [Pelican](http://docs.getpelican.com/) blogs. Clean is based on [Pure](http://purepelican.com) and added social media meta tags such as enabling Open Graph and Twitter Card.
+
 ## Config
 * `COVER_IMG_URL` - Set the sidebar image.
 * `PROFILE_IMAGE_URL` - Set the image/logo for the top circle cutout on sidebar.
